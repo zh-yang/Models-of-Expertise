@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="double-wings" />
+  <meta charset="utf-8">
+  <title>双飞翼布局</title>
+  <style>
+    * {
+      margin: 0;
+    }
+    #content{
+      border: 1px solid;
+    }
+    #content::after {
+      content: '';        
+      display: block;    
+      clear: both;        
+    }
+    aside,main,.extra {
+      float: left;  
+    }
+    main {
+      width: 100%;
+    }
+    .wrap {
+      margin-left: 100px;
+      margin-right: 150px;
+      background: blue;
+      height: 350px; 
+    }
+    aside {
+      width: 100px;        
+      height: 300px;       
+      background: red;
+      margin-left: -100%;
+    }
+    .extra {
+      width: 150px;        
+      height: 300px;       
+      background: yellow;
+      margin-left: -150px;
+    }
+  </style>
+</head>
+<body>
+   <div id="content">
+    <main>
+      <div class="wrap">main</div>
+    </main>
+    <aside>aside</aside>
+    <div class="extra">extra</div>
+  </div>
+</body>
+</html>

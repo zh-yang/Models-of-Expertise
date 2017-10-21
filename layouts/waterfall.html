@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-1.11.3.min.js"></script>
+  <meta charset="utf-8">
+  <title>waterfall</title>
+</head>
+<style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .wrap {
+      position: relative;
+    }
+    .wrap>.item {
+      width: 150px;
+      position: absolute;
+      margin-top: 10px;
+      transition: all 1s;
+    }
+    .wrap>.h1 {
+      height: 100px;
+      background: blue;
+    }
+    .wrap>.h2 {
+      height: 350px;
+      background: red;
+    }
+    .wrap>.h3 {
+      height: 280px;
+      background: green;
+    }
+    .wrap>.h4 {
+      height: 200px;
+      background: orange;
+    }
+</style>
+<body>
+  <div class="wrap">
+    <div class="item h1">1</div>
+    <div class="item h2">2</div>
+    <div class="item h3">3</div>
+    <div class="item h4">4</div>
+    <div class="item h1">5</div>
+    <div class="item h2">6</div>
+    <div class="item h1">7</div>
+    <div class="item h3">8</div>
+    <div class="item h4">9</div>
+    <div class="item h2">10</div>
+    <div class="item h1">11</div>
+    <div class="item h2">12</div>
+    <div class="item h3">13</div>
+    <div class="item h4">14</div>
+    <div class="item h1">15</div>
+    <div class="item h2">16</div>
+    <div class="item h1">17</div>
+    <div class="item h3">18</div>
+    <div class="item h4">19</div>
+    <div class="item h2">20</div>
+    <div class="item h1">21</div>
+    <div class="item h2">22</div>
+    <div class="item h3">23</div>
+    <div class="item h4">24</div>
+    <div class="item h1">25</div>
+    <div class="item h2">26</div>
+    <div class="item h1">27</div>
+    <div class="item h3">28</div>
+    <div class="item h4">29</div>
+    <div class="item h2">30</div>
+    <div class="item h1">31</div>
+    <div class="item h2">32</div>
+    <div class="item h3">33</div>
+    <div class="item h4">34</div>
+    <div class="item h1">35</div>
+    <div class="item h2">36</div>
+    <div class="item h1">37</div>
+    <div class="item h3">38</div>
+    <div class="item h4">39</div>
+    <div class="item h2">40</div>
+    <div class="item h1">41</div>
+    <div class="item h2">42</div>
+    <div class="item h3">43</div>
+    <div class="item h4">44</div>
+    <div class="item h1">45</div>
+    <div class="item h2">46</div>
+    <div class="item h1">47</div>
+    <div class="item h3">48</div>
+    <div class="item h4">49</div>
+    <div class="item h2">50</div>
+  </div>
+
+  <script type="text/javascript">
+      function waterFall(){
+      var $items = $('.wrap>.item')
+      var $wrap = $('.wrap')
+      var arrData = []
+      var num = Math.floor($wrap.width()/$items.width())
+      var marginT = 10
+      var marginL = ($wrap.width() - $items.width()*num)/(num+1)
+      
+      for(var i = 0;i < num;i++){
+        arrData.push(0)
+      }
+      for(var j = 0;j<$items.length;j++){
+        var low = arrData[0],index = 0
+        for(var k =1;k<num;k++){
+          if(arrData[k]<low){
+            low = arrData[k]
+            index = k
+          }
+        }
+        $items.eq(j).css({
+          left:$items.width()*index+marginL*(index+1),
+          top:low+marginT
+        })
+        arrData[index] += $items.eq(j).height()+marginT
+      }
+    }
+
+    var fall = (function(){
+      function init(){
+        waterFall()
+        $(window).resize(function(){
+          waterFall()
+        })
+      }
+      return{
+        init: init
+      }
+    })()
+    fall.init()
+
+  </script>
+</body>
+</html>
