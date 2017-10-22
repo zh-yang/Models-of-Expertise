@@ -49,3 +49,6 @@ https://github.com/zh-yang/npm-weather
 
 * 2.nodejs手写服务器
 https://github.com/zh-yang/node-server
+
+* 3.关于我的HTTP的认识
+http://www.jianshu.com/p/721eec0d095a
