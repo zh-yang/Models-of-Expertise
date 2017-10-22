@@ -1,7 +1,7 @@
 # Models-of-Expertise
 一些常用功能的范例
 
-### HTML&CSS&基本工具
+### HTML&CSS
 
 * 1.一个栅格系统
 https://zh-yang.github.io/Models-of-Expertise/grid-system
@@ -18,9 +18,8 @@ https://github.com/zh-yang/my-UI
 * 5.常见布局整理
 https://github.com/zh-yang/Models-of-Expertise/tree/master/layouts
 
-* 6.关于我对 BFC 的认识
-
-* 7.一个代码规范的企业站首页
+* 6.一个代码规范的企业站首页
+https://zh-yang.github.io/LebronStation
 
 ### JavaScript
 
@@ -36,15 +35,12 @@ https://github.com/zh-yang/JQuery-Components
 * 4.新闻站（jsonp+瀑布流+懒加载）
 https://github.com/zh-yang/News-website-waterfall
 
-* 5.关于我对原型链的理解
-
-* 6.我对JQuery源码的认识
-
 ### 框架&工具
 
 * 1.一个企业站首页（less、autoprefixer、gulp、requirejs）
 
 * 2.对上述页面使用 webpack 优化代码
+https://github.com/zh-yang/resume/tree/master/LebronII
 
 ### 后端语言
 
@@ -53,7 +49,3 @@ https://github.com/zh-yang/npm-weather
 
 * 2.nodejs手写服务器
 https://github.com/zh-yang/node-server
-
-### 新技术&其他
-
-* 1.vue todolist
