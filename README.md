@@ -52,3 +52,8 @@ https://github.com/zh-yang/node-server
 
 * 3.关于我的HTTP的认识
 http://www.jianshu.com/p/721eec0d095a
+
+### 新技术
+
+* 1.todolsit（Vue + BootStrap）
+https://zh-yang.github.io/vue-todolists
